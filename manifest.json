@@ -1,0 +1,33 @@
+{
+  "name": "Dwarkadhish Steel & Aluminium Glass | PVC Furniture",
+  "short_name": "Dwarkadhish",
+  "description": "Stainless steel railings, aluminium windows-doors, PVC kitchens, wardrobes aur ceiling — Vastral, Ahmedabad.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#0F2A4A",
+  "background_color": "#0F2A4A",
+  "lang": "hi",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

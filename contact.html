@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="alternate icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<title>Contact Us | Dwarkadhish Steel & Aluminium Glass | Dwarkadhish PVC Furniture</title>
+<meta name="description" content="Dwarkadhish Steel & Aluminium Glass aur PVC Furniture se contact karein — Call, WhatsApp ya visit karein Vastral, Ahmedabad. Free quote ke liye abhi inquire karein.">
+
+<style>
+  /* ---------- Tokens ---------- */
+  :root {
+    --navy-deep: #0F2A4A;
+    --navy-mid: #1B4D7A;
+    --navy-soft: #2E6CA4;
+    --steel: #C8CDD3;
+    --steel-light: #EEF1F4;
+    --white: #FFFFFF;
+    --ink: #16222E;
+    --accent: #E8590C;
+    --accent-dark: #C24A09;
+    --radius: 6px;
+    --shadow-sm: 0 2px 8px rgba(15,42,74,0.08);
+    --shadow-md: 0 8px 24px rgba(15,42,74,0.14);
+    --sticky-footer-h: 64px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.5;
+    padding-bottom: var(--sticky-footer-h);
+  }
+  img { display: block; max-width: 100%; }
+  a { text-decoration: none; color: inherit; }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    color: var(--navy-deep);
+    margin-bottom: 6px;
+  }
+  .section-sub {
+    font-size: 0.92rem;
+    color: #4A5A6A;
+    margin-bottom: 24px;
+    max-width: 32em;
+  }
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 18px; }
+  section { padding: 48px 0; }
+
+  /* ---------- Top bar ---------- */
+  .topbar { background: var(--navy-deep); color: var(--white); }
+  .topbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    max-width: 1140px;
+    margin: 0 auto;
+    gap: 16px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 900;
+    font-size: 1.05rem;
+    letter-spacing: -0.01em;
+  }
+  .brand-mark {
+    width: 34px; height: 34px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 1rem; color: var(--white);
+    flex-shrink: 0;
+  }
+  .brand-name span { color: var(--steel); font-weight: 400; display: block; font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  .desktop-nav { display: none; gap: 26px; font-size: 0.88rem; font-weight: 500; }
+  .desktop-nav a:hover { color: var(--steel); }
+  .desktop-nav a.active { color: var(--accent); }
+  .topbar-cta { display: none; gap: 10px; }
+
+  /* ---------- Page Hero ---------- */
+  .page-hero {
+    background-color: var(--navy-deep);
+    background-image:
+      linear-gradient(160deg, rgba(15,42,74,0.88) 0%, rgba(27,77,122,0.78) 60%, rgba(46,108,164,0.68) 100%),
+      url('images/page-header.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    padding: 50px 0 60px;
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  }
+  .page-hero::before {
+    content: "";
+    position: absolute;
+    top: -40px; right: -60px;
+    width: 280px; height: 280px;
+    background: radial-gradient(circle, rgba(232,89,12,0.18), transparent 70%);
+  }
+  .page-hero .eyebrow { color: var(--steel); }
+  .page-hero h1 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+  }
+  .page-hero h1 .mark { color: var(--accent); }
+  .page-hero p {
+    color: #CFE0EF;
+    font-size: 0.96rem;
+    max-width: 36em;
+  }
+  .breadcrumb {
+    display: flex; gap: 8px; align-items: center;
+    font-size: 0.78rem; color: var(--steel); margin-bottom: 16px;
+  }
+  .breadcrumb a { color: var(--steel); }
+  .breadcrumb a:hover { color: var(--white); }
+  .breadcrumb .sep { opacity: 0.5; }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 13px 22px;
+    border-radius: var(--radius);
+    font-weight: 700; font-size: 0.92rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    white-space: nowrap;
+  }
+  .btn:active { transform: scale(0.97); }
+  .btn-accent { background: var(--accent); color: var(--white); box-shadow: 0 6px 18px rgba(232,89,12,0.35); }
+  .btn-accent:hover { background: var(--accent-dark); }
+  .btn-outline-light { border-color: rgba(255,255,255,0.55); color: var(--white); background: transparent; }
+  .btn-outline-light:hover { background: rgba(255,255,255,0.1); }
+  .btn-navy { background: var(--navy-deep); color: var(--white); }
+  .btn-navy:hover { background: var(--navy-mid); }
+  .btn-block { width: 100%; }
+
+  /* ---------- Contact cards row ---------- */
+  .contact-cards-section { background: var(--white); }
+  .contact-cards {
+    display: grid;
+    gap: 14px;
+  }
+  .contact-card {
+    background: var(--white);
+    border: 1px solid #E1E6EB;
+    border-radius: 10px;
+    padding: 22px 18px;
+    box-shadow: var(--shadow-sm);
+    transition: border-color 0.15s ease, transform 0.15s ease;
+    display: block;
+  }
+  .contact-card:hover { border-color: var(--navy-soft); transform: translateY(-2px); }
+  .cc-icon {
+    width: 48px; height: 48px;
+    background: var(--steel-light);
+    color: var(--navy-deep);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 14px;
+  }
+  .cc-icon.accent { background: #FFE9D6; color: var(--accent-dark); }
+  .cc-icon.green { background: #E0F5E9; color: #128C5E; }
+  .contact-card h3 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #7A8794;
+    margin-bottom: 6px;
+  }
+  .contact-card .cc-value {
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--navy-deep);
+    margin-bottom: 4px;
+    word-break: break-word;
+  }
+  .contact-card .cc-sub {
+    font-size: 0.82rem;
+    color: #4A5A6A;
+  }
+
+  /* ---------- Form section ---------- */
+  .inquiry-section { background: var(--steel-light); }
+  .form-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 1px solid #E1E6EB;
+    box-shadow: var(--shadow-md);
+    padding: 26px 20px;
+  }
+  .form-row { margin-bottom: 16px; }
+  .form-row label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--navy-deep);
+    margin-bottom: 6px;
+  }
+  .form-row label .req { color: var(--accent); }
+  .form-row input,
+  .form-row textarea,
+  .form-row select {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1.5px solid #D6DCE2;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 0.92rem;
+    outline: none;
+    color: var(--ink);
+    background: var(--white);
+  }
+  .form-row input:focus,
+  .form-row textarea:focus,
+  .form-row select:focus { border-color: var(--navy-soft); }
+  .form-row textarea { resize: vertical; min-height: 110px; }
+  .form-note {
+    font-size: 0.74rem;
+    color: #7A8794;
+    margin-top: 12px;
+    text-align: center;
+  }
+  .form-row-2 { display: grid; gap: 16px; }
+
+  /* ---------- Map / Address section ---------- */
+  .visit-section { background: var(--white); }
+  .visit-grid { display: grid; gap: 22px; }
+  .address-card {
+    background: var(--steel-light);
+    border: 1px solid #E1E6EB;
+    border-radius: 10px;
+    padding: 22px 18px;
+  }
+  .address-card h3 {
+    font-size: 1.05rem;
+    font-weight: 900;
+    color: var(--navy-deep);
+    margin-bottom: 8px;
+  }
+  .address-card p {
+    font-size: 0.9rem;
+    color: #3A4A5C;
+    margin-bottom: 14px;
+  }
+  .hours-list {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 18px;
+    border-top: 1px solid #D6DCE2;
+    padding-top: 14px;
+  }
+  .hours-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 0.86rem;
+    color: #3A4A5C;
+  }
+  .hours-list li strong { color: var(--navy-deep); font-weight: 700; }
+  .hours-list li.closed strong { color: var(--accent); }
+
+  .map-wrap {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #E1E6EB;
+    box-shadow: var(--shadow-sm);
+    background: var(--steel-light);
+    aspect-ratio: 4/3;
+  }
+  .map-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+  /* ---------- FAQ ---------- */
+  .faq-section { background: var(--steel-light); }
+  .faq-list { display: grid; gap: 10px; }
+  .faq-item {
+    background: var(--white);
+    border: 1px solid #E1E6EB;
+    border-radius: 8px;
+    padding: 14px 18px;
+  }
+  .faq-item summary {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--navy-deep);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: "+";
+    font-size: 1.3rem;
+    color: var(--accent);
+    flex-shrink: 0;
+    transition: transform 0.15s ease;
+  }
+  .faq-item[open] summary::after { content: "−"; }
+  .faq-item p {
+    margin-top: 10px;
+    font-size: 0.88rem;
+    color: #4A5A6A;
+  }
+
+  /* ---------- Footer ---------- */
+  .contact-section { background: var(--navy-deep); color: var(--white); }
+  .contact-grid { display: grid; gap: 26px; }
+  .contact-block h3 {
+    font-size: 0.9rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--steel); margin-bottom: 12px;
+  }
+  .contact-line {
+    display: flex; gap: 10px; align-items: flex-start;
+    font-size: 0.9rem; margin-bottom: 10px; color: #DDE5EC;
+  }
+  .contact-line svg { flex-shrink: 0; margin-top: 2px; color: var(--accent); }
+  .contact-line a { color: #DDE5EC; }
+  .contact-line a:hover { color: var(--accent); }
+  .quicklinks { display: flex; flex-direction: column; gap: 9px; }
+  .quicklinks a { font-size: 0.88rem; color: #DDE5EC; }
+  .quicklinks a:hover { color: var(--accent); }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    margin-top: 30px; padding-top: 18px;
+    font-size: 0.76rem; color: var(--steel); text-align: center;
+  }
+  .footer-bottom .powered-by {
+    display: inline-block; margin-top: 6px;
+    color: var(--accent); font-weight: 700;
+  }
+  .footer-bottom .powered-by:hover { text-decoration: underline; }
+
+  /* ---------- Sticky mobile footer ---------- */
+  .sticky-footer {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    height: var(--sticky-footer-h);
+    background: var(--white);
+    border-top: 1px solid #E1E6EB;
+    box-shadow: 0 -6px 18px rgba(15,42,74,0.12);
+    display: flex; z-index: 50;
+  }
+  .sticky-footer a,
+  .sticky-footer button.sticky-action {
+    flex: 1; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 3px;
+    font-size: 0.66rem; font-weight: 700;
+    color: var(--navy-mid);
+    background: none; border: none; font-family: inherit; cursor: pointer;
+  }
+  .sticky-footer a.call-action,
+  .sticky-footer button.call-action { background: var(--navy-deep); color: var(--white); }
+  .sticky-footer a.whatsapp-action { background: var(--accent); color: var(--white); }
+  .sticky-footer a svg,
+  .sticky-footer button svg { width: 20px; height: 20px; }
+
+  /* ---------- Menu sheets ---------- */
+  .menu-overlay {
+    position: fixed; inset: 0;
+    background: rgba(15,42,74,0.55);
+    z-index: 60; display: none;
+  }
+  .menu-overlay.open { display: block; }
+  .menu-sheet {
+    position: absolute; left: 0; right: 0; bottom: var(--sticky-footer-h);
+    background: var(--white);
+    border-radius: 14px 14px 0 0;
+    box-shadow: 0 -8px 24px rgba(15,42,74,0.2);
+    padding: 8px 0 10px;
+    animation: sheetUp 0.18s ease;
+  }
+  @keyframes sheetUp { from { transform: translateY(16px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  .menu-sheet-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 18px 12px;
+    font-weight: 900; color: var(--navy-deep); font-size: 1rem;
+    border-bottom: 1px solid #E1E6EB; margin-bottom: 6px;
+  }
+  .menu-sheet-header button {
+    background: none; border: none; font-size: 1.5rem; line-height: 1;
+    color: #8A97A3; cursor: pointer; padding: 0 4px;
+  }
+  .menu-sheet-link {
+    display: block; padding: 14px 18px;
+    font-size: 0.94rem; font-weight: 500; color: var(--ink);
+    border-bottom: 1px solid #F1F3F5;
+  }
+  .menu-sheet-link:last-child { border-bottom: none; }
+  .menu-sheet-link:active { background: var(--steel-light); }
+  .call-sheet-option {
+    display: flex; align-items: center; gap: 12px;
+    padding: 14px 18px; border-bottom: 1px solid #F1F3F5;
+  }
+  .call-sheet-option:last-child { border-bottom: none; }
+  .call-sheet-icon {
+    width: 38px; height: 38px; flex-shrink: 0;
+    background: var(--steel-light);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--navy-deep);
+  }
+  .call-sheet-text { flex: 1; }
+  .call-sheet-text strong { display: block; font-size: 0.9rem; color: var(--navy-deep); }
+  .call-sheet-text span { font-size: 0.78rem; color: #6A7886; }
+  .call-sheet-option .btn { padding: 9px 14px; font-size: 0.78rem; }
+
+  /* ---------- Toast ---------- */
+  .toast {
+    position: fixed; bottom: calc(var(--sticky-footer-h) + 12px); left: 50%;
+    transform: translateX(-50%);
+    background: var(--navy-deep); color: var(--white);
+    padding: 12px 20px; border-radius: 8px;
+    font-size: 0.88rem; font-weight: 700;
+    box-shadow: var(--shadow-md);
+    z-index: 200;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+  .toast.show { opacity: 1; }
+
+  @media (min-width: 860px) {
+    .menu-overlay { display: none !important; }
+    .toast { bottom: 24px; }
+  }
+
+  /* ---------- Desktop ---------- */
+  @media (min-width: 860px) {
+    .desktop-nav { display: flex; }
+    .topbar-cta { display: flex; }
+    .sticky-footer { display: none; }
+    body { padding-bottom: 0; }
+    .page-hero h1 { font-size: 2.4rem; }
+    .page-hero p { font-size: 1.05rem; }
+    .contact-cards { grid-template-columns: repeat(3, 1fr); }
+    .form-card { max-width: 720px; margin: 0 auto; padding: 32px 28px; }
+    .form-row-2 { grid-template-columns: 1fr 1fr; }
+    .visit-grid { grid-template-columns: 1fr 1.1fr; align-items: stretch; }
+    .contact-grid { grid-template-columns: 1.2fr 1fr 1fr; }
+    .section-title { font-size: 1.85rem; }
+  }
+</style>
+<meta name="theme-color" content="#0F2A4A">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="assets/app.css">
+<script>document.documentElement.className+=' has-anim';</script>
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<header class="topbar" id="top">
+  <div class="topbar-inner">
+    <a href="index.html" class="brand">
+      <div class="brand-mark">DK</div>
+      <div class="brand-name">Dwarkadhish<span>Steel &amp; Aluminium Glass</span></div>
+    </a>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#fabrication">Fabrication</a>
+      <a href="index.html#interior">PVC Interior</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="topbar-cta">
+      <a href="tel:+918884637534" class="btn btn-outline-light">Call Now</a>
+      <a href="https://wa.me/918884637534" class="btn btn-accent">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="sep">›</span>
+      <span>Contact Us</span>
+    </div>
+    <span class="eyebrow">Get In Touch</span>
+    <h1>Aaiye, <span class="mark">Baat Karein</span></h1>
+    <p>Free consultation, best price quote ya site visit ke liye humse contact karein. Hum aapki har query ka jawab dene ko ready hain.</p>
+  </div>
+</section>
+
+<!-- ============ CONTACT CARDS ============ -->
+<section class="contact-cards-section">
+  <div class="container">
+    <span class="eyebrow">Quick Connect</span>
+    <h2 class="section-title">Humse Kaise Judein</h2>
+    <p class="section-sub">Apne pasand ke tareeke se contact karein — turant response milega.</p>
+    <div class="contact-cards">
+      <a href="tel:+918884637534" class="contact-card">
+        <div class="cc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3>Call Us</h3>
+        <div class="cc-value">+91 88846 37534</div>
+        <div class="cc-sub">Suresh Bhai • Tap to call</div>
+      </a>
+      <a href="https://wa.me/918884637534" class="contact-card">
+        <div class="cc-icon green">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.5-.7-2.5-1.3-3.5-2.9-.3-.4 0-.4.2-.7.2-.3.4-.5.5-.7.1-.2.1-.4 0-.6-.1-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1 0 1.2.9 2.4 1 2.6.1.2 1.8 2.8 4.4 3.8 2.6 1 2.6.7 3.1.6.5 0 1.6-.6 1.8-1.3.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l4.9-1.3c1.5.8 3.2 1.3 5.1 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        </div>
+        <h3>WhatsApp</h3>
+        <div class="cc-value">+91 88846 37534</div>
+        <div class="cc-sub">Quick chat • Photos bhejein</div>
+      </a>
+      <a href="#visit" class="contact-card">
+        <div class="cc-icon accent">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Visit Showroom</h3>
+        <div class="cc-value">Vastral, Ahmedabad</div>
+        <div class="cc-sub">Shreedhar Sky, S.P. Ring Road</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INQUIRY FORM ============ -->
+<section class="inquiry-section" id="inquiry">
+  <div class="container">
+    <span class="eyebrow">Free Quote</span>
+    <h2 class="section-title">Apni Inquiry Bhejein</h2>
+    <p class="section-sub">Form bharein — hum 24 ghante mein call back karenge with best price.</p>
+
+    <form class="form-card" id="inquiryForm" onsubmit="return submitInquiry(event)">
+      <div class="form-row-2">
+        <div class="form-row">
+          <label for="name">Aapka Naam <span class="req">*</span></label>
+          <input type="text" id="name" name="name" required placeholder="Pura naam likhein">
+        </div>
+        <div class="form-row">
+          <label for="phone">Mobile Number <span class="req">*</span></label>
+          <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="10-digit mobile number">
+        </div>
+      </div>
+
+      <div class="form-row-2">
+        <div class="form-row">
+          <label for="city">City / Area</label>
+          <input type="text" id="city" name="city" placeholder="Jaise: Vastral, Ahmedabad">
+        </div>
+        <div class="form-row">
+          <label for="service">Service Type <span class="req">*</span></label>
+          <select id="service" name="service" required>
+            <option value="">-- Select --</option>
+            <option value="Stainless Steel Railings">Stainless Steel Railings</option>
+            <option value="Aluminium Windows & Doors">Aluminium Windows &amp; Doors</option>
+            <option value="Partitions & Swings">Partitions &amp; Swings</option>
+            <option value="Laser Cutting & Center Table">Laser Cutting &amp; Center Table</option>
+            <option value="PVC Kitchens">PVC Kitchens</option>
+            <option value="Wardrobes">Wardrobes</option>
+            <option value="TV Units">TV Units</option>
+            <option value="Bedroom Interior">Bedroom Interior</option>
+            <option value="Ceiling Paneling">Ceiling Paneling</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="message">Apni Requirement Likhein</label>
+        <textarea id="message" name="message" placeholder="Size, design, color ya jo bhi details aap share karna chahein..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-accent btn-block">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.5-.7-2.5-1.3-3.5-2.9-.3-.4 0-.4.2-.7.2-.3.4-.5.5-.7.1-.2.1-.4 0-.6-.1-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1 0 1.2.9 2.4 1 2.6.1.2 1.8 2.8 4.4 3.8 2.6 1 2.6.7 3.1.6.5 0 1.6-.6 1.8-1.3.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l4.9-1.3c1.5.8 3.2 1.3 5.1 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        Send via WhatsApp
+      </button>
+      <p class="form-note">Submit karne par aapki query WhatsApp pe directly bhej di jayegi.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ VISIT US / MAP ============ -->
+<section class="visit-section" id="visit">
+  <div class="container">
+    <span class="eyebrow">Visit Us</span>
+    <h2 class="section-title">Hamare Showroom Aaiye</h2>
+    <p class="section-sub">Live samples dekhein, designs touch karein aur expert advice lein.</p>
+
+    <div class="visit-grid">
+      <div class="address-card">
+        <h3>Dwarkadhish Steel &amp; Aluminium Glass</h3>
+        <p>Shop No. 5, Shreedhar Sky, Beside Shreedhar Sparsh, B/H Royal Restaurant, S. P. Ring Road, Vastral, Ahmedabad - 382418.</p>
+
+        <ul class="hours-list">
+          <li><strong>Monday – Saturday</strong><span>9:00 AM – 8:00 PM</span></li>
+          <li class="closed"><strong>Sunday</strong><span>Closed</span></li>
+        </ul>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a href="https://www.google.com/maps/search/?api=1&query=Shreedhar+Sky+Vastral+Ahmedabad" target="_blank" rel="noopener" class="btn btn-navy">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Get Directions
+          </a>
+          <a href="tel:+918884637534" class="btn btn-accent">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Before Visit
+          </a>
+        </div>
+      </div>
+
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps?q=Shreedhar+Sky+Vastral+Ahmedabad&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Dwarkadhish Showroom Location">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq-section">
+  <div class="container">
+    <span class="eyebrow">FAQs</span>
+    <h2 class="section-title">Aksar Pucha Jaane Wale Sawaal</h2>
+    <p class="section-sub">Aapke common questions ke jawab.</p>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Quote lene ke liye kya karna hoga?</summary>
+        <p>Bas hume call karein +91 89558 69034 par ya WhatsApp pe message karein. Aap upar diye form se bhi inquiry bhej sakte hain — hum 24 ghante mein response denge.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Kya aap site visit karte hain?</summary>
+        <p>Haan, Ahmedabad aur aas-paas ke areas mein hum free site visit karte hain. Measurement aur consultation ke baad hi final quote diya jata hai.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Kitna time lagta hai project complete karne mein?</summary>
+        <p>Project ke size par depend karta hai. Generally aluminium windows-doors ka kaam 7-15 din mein aur PVC kitchen ka kaam 10-20 din mein complete ho jata hai.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Kya warranty milti hai?</summary>
+        <p>Haan, hamare har product par standard warranty hoti hai. Material aur installation dono ki guarantee di jati hai. Details project ke time discuss kar lenge.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Payment kaise karna hota hai?</summary>
+        <p>Booking ke time advance, work progress par interim payment aur installation complete hone par final balance. Cash, UPI, bank transfer — sab options available hain.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="contact" class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-block">
+        <div class="brand" style="margin-bottom:14px;">
+          <div class="brand-mark">DK</div>
+          <div class="brand-name">Dwarkadhish<span>Steel &amp; Aluminium Glass</span></div>
+        </div>
+        <p style="font-size:0.85rem; color:var(--steel);">Dwarkadhish Steel &amp; Aluminium Glass aur Dwarkadhish PVC Furniture — design se installation tak, end-to-end service.</p>
+      </div>
+      <div class="contact-block">
+        <h3>Contact Us</h3>
+        <div class="contact-line">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span><a href="tel:+918955869034">Hemant Bhai: +91 89558 69034</a></span>
+        </div>
+        <div class="contact-line">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span><a href="tel:+918884637534">Suresh Bhai: +91 88846 37534</a></span>
+        </div>
+        <div class="contact-line">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span><a href="tel:+917568594307">Sarvan Bhai: +91 75685 94307</a></span>
+        </div>
+        <div class="contact-line">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.5-.7-2.5-1.3-3.5-2.9-.3-.4 0-.4.2-.7.2-.3.4-.5.5-.7.1-.2.1-.4 0-.6-.1-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1 0 1.2.9 2.4 1 2.6.1.2 1.8 2.8 4.4 3.8 2.6 1 2.6.7 3.1.6.5 0 1.6-.6 1.8-1.3.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l4.9-1.3c1.5.8 3.2 1.3 5.1 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          <span><a href="https://wa.me/918884637534">WhatsApp: +91 88846 37534</a></span>
+        </div>
+        <div class="contact-line">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Shop No. 5, Shreedhar Sky, Beside Shreedhar Sparsh, B/H Royal Restaurant, S. P. Ring Road, Vastral, Ahmedabad - 382418.</span>
+        </div>
+      </div>
+      <div class="contact-block">
+        <h3>Quick Links</h3>
+        <div class="quicklinks">
+          <a href="index.html">Home</a>
+          <a href="index.html#fabrication">Fabrication</a>
+          <a href="index.html#interior">PVC Interior</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Dwarkadhish Steel &amp; Aluminium Glass | Dwarkadhish PVC Furniture. All rights reserved.<br>
+      <a href="karan.html" rel="noopener" class="powered-by">Powered by K-Tech Solution</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ STICKY MOBILE FOOTER ============ -->
+<nav class="sticky-footer">
+  <a href="index.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    Home
+  </a>
+  <a href="#menu-sheet" id="menuToggle">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+    Menu
+  </a>
+  <button type="button" class="sticky-action call-action" id="callToggle">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Call
+  </button>
+  <a href="https://wa.me/918884637534" class="whatsapp-action">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.5-.7-2.5-1.3-3.5-2.9-.3-.4 0-.4.2-.7.2-.3.4-.5.5-.7.1-.2.1-.4 0-.6-.1-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1 0 1.2.9 2.4 1 2.6.1.2 1.8 2.8 4.4 3.8 2.6 1 2.6.7 3.1.6.5 0 1.6-.6 1.8-1.3.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l4.9-1.3c1.5.8 3.2 1.3 5.1 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+    WhatsApp
+  </a>
+</nav>
+
+<!-- ============ MOBILE MENU SHEET ============ -->
+<div id="menu-sheet" class="menu-overlay">
+  <div class="menu-sheet">
+    <div class="menu-sheet-header">
+      <span>Menu</span>
+      <button type="button" id="menuClose" aria-label="Close menu">&times;</button>
+    </div>
+    <a href="index.html" class="menu-sheet-link">Home</a>
+    <a href="index.html#fabrication" class="menu-sheet-link">Fabrication</a>
+    <a href="index.html#interior" class="menu-sheet-link">PVC Interior</a>
+    <a href="about.html" class="menu-sheet-link">About Us</a>
+    <a href="contact.html" class="menu-sheet-link">Contact</a>
+  </div>
+</div>
+
+<!-- ============ CALL CHOICE SHEET ============ -->
+<div id="call-sheet" class="menu-overlay">
+  <div class="menu-sheet">
+    <div class="menu-sheet-header">
+      <span>Kise Call Karein?</span>
+      <button type="button" id="callClose" aria-label="Close call options">&times;</button>
+    </div>
+    <div class="call-sheet-option">
+      <div class="call-sheet-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </div>
+      <div class="call-sheet-text">
+        <strong>Hemant Bhai</strong>
+        <span>+91 89558 69034</span>
+      </div>
+      <a href="tel:+918955869034" class="btn btn-navy">Call</a>
+    </div>
+    <div class="call-sheet-option">
+      <div class="call-sheet-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </div>
+      <div class="call-sheet-text">
+        <strong>Suresh Bhai</strong>
+        <span>+91 88846 37534</span>
+      </div>
+      <a href="tel:+918884637534" class="btn btn-navy">Call</a>
+    </div>
+    <div class="call-sheet-option">
+      <div class="call-sheet-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </div>
+      <div class="call-sheet-text">
+        <strong>Sarvan Bhai</strong>
+        <span>+91 75685 94307</span>
+      </div>
+      <a href="tel:+917568594307" class="btn btn-navy">Call</a>
+    </div>
+  </div>
+</div>
+
+<!-- Toast for feedback -->
+<div id="toast" class="toast">WhatsApp khol raha hain...</div>
+
+<script>
+  (function () {
+    var menuToggle = document.getElementById('menuToggle');
+    var menuSheet = document.getElementById('menu-sheet');
+    var menuClose = document.getElementById('menuClose');
+
+    var callToggle = document.getElementById('callToggle');
+    var callSheet = document.getElementById('call-sheet');
+    var callClose = document.getElementById('callClose');
+
+    function openSheet(sheet) {
+      return function (e) {
+        if (e) e.preventDefault();
+        sheet.classList.add('open');
+      };
+    }
+    function closeSheet(sheet) {
+      return function () {
+        sheet.classList.remove('open');
+      };
+    }
+
+    menuToggle.addEventListener('click', openSheet(menuSheet));
+    menuClose.addEventListener('click', closeSheet(menuSheet));
+    menuSheet.addEventListener('click', function (e) {
+      if (e.target === menuSheet) closeSheet(menuSheet)();
+    });
+    menuSheet.querySelectorAll('.menu-sheet-link').forEach(function (link) {
+      link.addEventListener('click', closeSheet(menuSheet));
+    });
+
+    callToggle.addEventListener('click', openSheet(callSheet));
+    callClose.addEventListener('click', closeSheet(callSheet));
+    callSheet.addEventListener('click', function (e) {
+      if (e.target === callSheet) closeSheet(callSheet)();
+    });
+  })();
+
+  function showToast(msg) {
+    var t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(function () { t.classList.remove('show'); }, 2500);
+  }
+
+  function submitInquiry(e) {
+    e.preventDefault();
+    var name = document.getElementById('name').value.trim();
+    var phone = document.getElementById('phone').value.trim();
+    var city = document.getElementById('city').value.trim();
+    var service = document.getElementById('service').value;
+    var message = document.getElementById('message').value.trim();
+
+    if (!name || !phone || !service) {
+      showToast('Required fields bharein');
+      return false;
+    }
+
+    var text = '*New Inquiry — Dwarkadhish*%0A%0A';
+    text += '*Name:* ' + encodeURIComponent(name) + '%0A';
+    text += '*Phone:* ' + encodeURIComponent(phone) + '%0A';
+    if (city) text += '*City:* ' + encodeURIComponent(city) + '%0A';
+    text += '*Service:* ' + encodeURIComponent(service) + '%0A';
+    if (message) text += '*Message:* ' + encodeURIComponent(message) + '%0A';
+
+    var url = 'https://wa.me/918884637534?text=' + text;
+    showToast('WhatsApp khol raha hain...');
+    setTimeout(function () { window.open(url, '_blank'); }, 400);
+    return false;
+  }
+</script>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>

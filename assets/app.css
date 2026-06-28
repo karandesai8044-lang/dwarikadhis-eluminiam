@@ -1,0 +1,251 @@
+/* ============================================================
+   Dwarkadhish — Animations & Polish
+   Pure CSS + GPU-accelerated (transform/opacity only)
+   File size kept small for fast loading
+   ============================================================ */
+
+/* ---------- 1. Section fade-in on scroll ---------- */
+html.has-anim section {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+html.has-anim section.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hero / page-hero should appear immediately (above the fold) */
+html.has-anim .hero,
+html.has-anim .page-hero {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- 2. Staggered grid children fade-in ---------- */
+html.has-anim .cat-grid > *,
+html.has-anim .why-list > *,
+html.has-anim .contact-cards > *,
+html.has-anim .brand-cards > *,
+html.has-anim .mv-grid > *,
+html.has-anim .stats-grid > *,
+html.has-anim .faq-list > *,
+html.has-anim .gallery-grid > * {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+html.has-anim .in-view > *:nth-child(1) { transition-delay: 0ms; }
+html.has-anim .in-view > *:nth-child(2) { transition-delay: 70ms; }
+html.has-anim .in-view > *:nth-child(3) { transition-delay: 140ms; }
+html.has-anim .in-view > *:nth-child(4) { transition-delay: 210ms; }
+html.has-anim .in-view > *:nth-child(5) { transition-delay: 280ms; }
+html.has-anim .in-view > *:nth-child(6) { transition-delay: 350ms; }
+html.has-anim .in-view > *:nth-child(7) { transition-delay: 420ms; }
+html.has-anim .in-view > *:nth-child(8) { transition-delay: 490ms; }
+html.has-anim .in-view > *:nth-child(9) { transition-delay: 560ms; }
+html.has-anim .in-view > *:nth-child(10) { transition-delay: 630ms; }
+
+html.has-anim .cat-grid.in-view > *,
+html.has-anim .why-list.in-view > *,
+html.has-anim .contact-cards.in-view > *,
+html.has-anim .brand-cards.in-view > *,
+html.has-anim .mv-grid.in-view > *,
+html.has-anim .stats-grid.in-view > *,
+html.has-anim .faq-list.in-view > *,
+html.has-anim .gallery-grid.in-view > * {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- 3. Hero text pop-in ---------- */
+html.has-anim .hero .hero-inner > div > *,
+html.has-anim .page-hero > .container > * {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: heroPop 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+html.has-anim .hero .hero-inner > div > *:nth-child(1) { animation-delay: 0.1s; }
+html.has-anim .hero .hero-inner > div > *:nth-child(2) { animation-delay: 0.2s; }
+html.has-anim .hero .hero-inner > div > *:nth-child(3) { animation-delay: 0.3s; }
+html.has-anim .hero .hero-inner > div > *:nth-child(4) { animation-delay: 0.4s; }
+html.has-anim .hero .hero-inner > div > *:nth-child(5) { animation-delay: 0.5s; }
+html.has-anim .page-hero > .container > *:nth-child(1) { animation-delay: 0.1s; }
+html.has-anim .page-hero > .container > *:nth-child(2) { animation-delay: 0.2s; }
+html.has-anim .page-hero > .container > *:nth-child(3) { animation-delay: 0.3s; }
+html.has-anim .page-hero > .container > *:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes heroPop {
+  to { opacity: 1; transform: none; }
+}
+
+/* ---------- 4. Topbar slide down ---------- */
+html.has-anim .topbar {
+  animation: dropIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes dropIn {
+  from { transform: translateY(-100%); opacity: 0; }
+  to   { transform: none; opacity: 1; }
+}
+
+/* ---------- 5. Sticky mobile footer slide up ---------- */
+html.has-anim .sticky-footer {
+  animation: slideUpFooter 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.25s backwards;
+}
+@keyframes slideUpFooter {
+  from { transform: translateY(100%); }
+  to   { transform: none; }
+}
+
+/* ---------- 6. Card hover lift ---------- */
+.cat-card,
+.contact-card,
+.brand-card,
+.mv-card,
+.faq-item {
+  transition:
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.25s ease,
+    border-color 0.2s ease !important;
+}
+.cat-card:hover,
+.contact-card:hover,
+.brand-card:hover,
+.mv-card:hover {
+  transform: translateY(-5px) !important;
+}
+.brand-card:hover,
+.mv-card:hover {
+  box-shadow: 0 14px 32px rgba(15, 42, 74, 0.16);
+}
+
+/* ---------- 7. Image gentle zoom on card hover ---------- */
+.cat-image,
+.story-image,
+.gallery-grid > div {
+  overflow: hidden;
+}
+.cat-image img,
+.story-image img,
+.gallery-grid img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+.cat-card:hover .cat-image img,
+.story-image:hover img,
+.gallery-grid > div:hover img {
+  transform: scale(1.07);
+}
+
+/* ---------- 8. Button micro-interaction ---------- */
+.btn {
+  transition:
+    transform 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease !important;
+}
+.btn:hover {
+  transform: translateY(-2px) !important;
+}
+.btn-accent:hover {
+  box-shadow: 0 12px 24px rgba(232, 89, 12, 0.45) !important;
+}
+.btn:active {
+  transform: translateY(0) scale(0.97) !important;
+}
+
+/* ---------- 9. Brand mark fun pulse on hover ---------- */
+.brand-mark {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.brand:hover .brand-mark {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+/* ---------- 10. Number counter ---------- */
+.counter {
+  font-variant-numeric: tabular-nums;
+  display: inline-block;
+  min-width: 1.2em;
+}
+
+/* ---------- 11. Mobile menu/call sheet smoother open ---------- */
+.menu-overlay.open .menu-sheet {
+  animation: sheetSlide 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes sheetSlide {
+  from { transform: translateY(60%); opacity: 0; }
+  to   { transform: none; opacity: 1; }
+}
+
+/* ---------- 12. FAQ accordion icon rotate ---------- */
+.faq-item summary::after {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ---------- 13. Smooth focus indicators (accessibility) ---------- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent, #E8590C);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ---------- 14. Smooth scroll already in html, ensure ---------- */
+html { scroll-behavior: smooth; }
+
+/* ---------- 15. Respect prefers-reduced-motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  html.has-anim section,
+  html.has-anim .hero .hero-inner > div > *,
+  html.has-anim .page-hero > .container > *,
+  html.has-anim .cat-grid > *,
+  html.has-anim .why-list > *,
+  html.has-anim .contact-cards > *,
+  html.has-anim .brand-cards > *,
+  html.has-anim .mv-grid > *,
+  html.has-anim .stats-grid > *,
+  html.has-anim .faq-list > *,
+  html.has-anim .gallery-grid > * {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}
+
+/* ---------- 16. Tiny offline banner ---------- */
+#offline-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--accent, #E8590C);
+  color: #fff;
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  z-index: 1000;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+#offline-banner.show {
+  transform: none;
+}
